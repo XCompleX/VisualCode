@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F686622C-1D83-4373-A118-CE245197C491}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VisualCode</RootNamespace>
+    <AssemblyName>VisualCode</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="ScintillaNET, Version=3.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\jacobslusser.ScintillaNET.3.6.3\lib\net40\ScintillaNET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AriphmeticBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AriphmeticBlock.Designer.cs">
+      <DependentUpon>AriphmeticBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Block.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Block.Designer.cs">
+      <DependentUpon>Block.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Break.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Break.Designer.cs">
+      <DependentUpon>Break.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code.Designer.cs">
+      <DependentUpon>Code.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommingBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommingBlock.Designer.cs">
+      <DependentUpon>CommingBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComparisionStringBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComparisionStringBlock.Designer.cs">
+      <DependentUpon>ComparisionStringBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComparisonBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComparisonBlock.Designer.cs">
+      <DependentUpon>ComparisonBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConcatenationBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConcatenationBlock.Designer.cs">
+      <DependentUpon>ConcatenationBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Continue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Continue.Designer.cs">
+      <DependentUpon>Continue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoWhile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DoWhile.Designer.cs">
+      <DependentUpon>DoWhile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="For.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="For.Designer.cs">
+      <DependentUpon>For.cs</DependentUpon>
+    </Compile>
+    <Compile Include="getElem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="getElem.Designer.cs">
+      <DependentUpon>getElem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="getVariable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="getVariable.Designer.cs">
+      <DependentUpon>getVariable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="If.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="If.Designer.cs">
+      <DependentUpon>If.cs</DependentUpon>
+    </Compile>
+    <Compile Include="initArray.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="initArray.Designer.cs">
+      <DependentUpon>initArray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Link.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Link.Designer.cs">
+      <DependentUpon>Link.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LinkInput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LinkInput.Designer.cs">
+      <DependentUpon>LinkInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LinkOutput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LinkOutput.Designer.cs">
+      <DependentUpon>LinkOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogicBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LogicBlock.Designer.cs">
+      <DependentUpon>LogicBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="print.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="print.Designer.cs">
+      <DependentUpon>print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="read.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="read.Designer.cs">
+      <DependentUpon>read.cs</DependentUpon>
+    </Compile>
+    <Compile Include="setElem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="setElem.Designer.cs">
+      <DependentUpon>setElem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="setVariable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="setVariable.Designer.cs">
+      <DependentUpon>setVariable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Space.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Space.Designer.cs">
+      <DependentUpon>Space.cs</DependentUpon>
+    </Compile>
+    <Compile Include="startBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="startBlock.Designer.cs">
+      <DependentUpon>startBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VarLink.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VarLink.Designer.cs">
+      <DependentUpon>VarLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VarLinkInput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VarLinkInput.Designer.cs">
+      <DependentUpon>VarLinkInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VarLinkOutput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VarLinkOutput.Designer.cs">
+      <DependentUpon>VarLinkOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="While.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="While.Designer.cs">
+      <DependentUpon>While.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AriphmeticBlock.resx">
+      <DependentUpon>AriphmeticBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Block.resx">
+      <DependentUpon>Block.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Break.resx">
+      <DependentUpon>Break.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code.resx">
+      <DependentUpon>Code.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommingBlock.resx">
+      <DependentUpon>CommingBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComparisionStringBlock.resx">
+      <DependentUpon>ComparisionStringBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComparisonBlock.resx">
+      <DependentUpon>ComparisonBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConcatenationBlock.resx">
+      <DependentUpon>ConcatenationBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Continue.resx">
+      <DependentUpon>Continue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoWhile.resx">
+      <DependentUpon>DoWhile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor.resx">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="For.resx">
+      <DependentUpon>For.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="getElem.resx">
+      <DependentUpon>getElem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="getVariable.resx">
+      <DependentUpon>getVariable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="If.resx">
+      <DependentUpon>If.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="initArray.resx">
+      <DependentUpon>initArray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Link.resx">
+      <DependentUpon>Link.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinkInput.resx">
+      <DependentUpon>LinkInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinkOutput.resx">
+      <DependentUpon>LinkOutput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogicBlock.resx">
+      <DependentUpon>LogicBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="print.resx">
+      <DependentUpon>print.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="read.resx">
+      <DependentUpon>read.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="setElem.resx">
+      <DependentUpon>setElem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="setVariable.resx">
+      <DependentUpon>setVariable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Space.resx">
+      <DependentUpon>Space.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="startBlock.resx">
+      <DependentUpon>startBlock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VarLink.resx">
+      <DependentUpon>VarLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VarLinkInput.resx">
+      <DependentUpon>VarLinkInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VarLinkOutput.resx">
+      <DependentUpon>VarLinkOutput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="While.resx">
+      <DependentUpon>While.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boolean_capsule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boolean_capsule_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\booleanLink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\booleanLinkConnection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_capsule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_capsule_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\charLink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\charLinkConnection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\float_capsule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\float_capsule_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floatLink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hover_capsule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoverLink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoverLinkConnection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgonline-com-ua-Resize-3SG9bKq0gx1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\integer_capsule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\integer_capsule_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\integerLinkConnection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\string_capsule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\string_capsule_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stringLink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stringLinkConnection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triangle_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triangleLink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triangleLinkFocus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triangleLinkHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floatLinkConnection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\integerLink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boolArray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\charArray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\intArray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floatArray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stringArray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boolArrayConnection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\charArrayConnection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\intArrayConnection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floatArrayConnection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stringArrayConnection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Array_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArrayConnection_hover.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
